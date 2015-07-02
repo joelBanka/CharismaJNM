@@ -5,7 +5,7 @@ $prenom='';
  $msg = "Veullez saisir les champs Nom et Prenom";
  if(isset($_POST))
   echo "je poste";
- echo "je ne poste pas";
+ echo "je ne poste pas (test pour commit)";
  /*if(isset($_POST) && (!empty($_POST['nom']))  && (!empty($_POST['prenom']))){
   $msg = "Insertion reussie";
 }
