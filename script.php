@@ -11,11 +11,8 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-
 $req = $bdd->prepare('INSERT INTO bdcharisma (timing, nom, prenom, titre, auteur, action,message) VALUES(?, ?, ?, ?, ?, ?,?)');
-
 $req->execute(array($_POST['timing'], $_POST['nom'], $_POST['prenom'], $_POST['titre'], $_POST['acteur'], $_POST['action'], $_POST['message']));
-
 header('Location: monFichier.php');
 $req->closeCursor();
 $bdd = null;

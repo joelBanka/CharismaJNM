@@ -14,8 +14,7 @@ else if(isset($_POST)&&(empty($_POST['nom']))  || (isset($_POST)  empty($_POST['
 $msg = 'Veullez saisir les champs Nom ou Prenom';
 }*/
 
-
-
+ 
 $link=mysqli_connect("localhost","root","");
 mysqli_select_db($link,"script_action");
 //echo "string";
