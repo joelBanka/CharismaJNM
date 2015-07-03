@@ -8,7 +8,7 @@ include 'db.php';
   <body>
    <table border="1">
    <?php
-    $afficher = premierepage();
+    $afficher = premierePage();
     foreach ($afficher as $mediatheque)
     {
 		echo "<tr><td>";

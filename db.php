@@ -1,5 +1,5 @@
 <?php
-function  Connect()
+function  connect()
 {
 	$user = 'root';
 	$pass = '';
@@ -20,9 +20,9 @@ function  Connect()
 	return $dbh;
 }
 
-function premierepage()
+function premierePage()
 {
-	$dbh = Connect();
+	$dbh = connect();
 	$sql =
 			"SELECT nom
 			from utilisateur";
@@ -39,7 +39,7 @@ function premierepage()
 	}
 }
 
-function Insertioncommentaire($lasnam, $firsnam)
+function insertionUtilisateur($lasnam, $firsnam)
 {
 	$dbh = connect();
 	$sql = "INSERT INTO utilisateur
@@ -55,3 +55,26 @@ function Insertioncommentaire($lasnam, $firsnam)
 		return $insertion;
 	}
 }
+
+function isGoodPasword($pass){
+    $dbh = connect();
+    $sql = "SELECT pass FROM password";
+    echo $sql;
+    $query = $dbh->query($sql);
+    $goodPass = $query->fetch(PDO::FETCH_ASSOC);
+    var_dump($pass);
+    print_r($goodPass['pass']);
+    
+    if (trim($pass)==$goodPass['pass']){
+        
+        return true; 
+    }
+    return false;  
+     
+     
+     
+}
+
+
+
+

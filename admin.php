@@ -231,13 +231,9 @@ var n = minute.toString();
     <label class="radio-inline" for="autres">
       <input type="radio" name="auteur" value="autres"> AUTRES 
     </label> 
-</div>
-	
+</div>	
 	<br> </br>
- 
-
-	
-	<div>
+ 		<div>
  <label for="name"> Nom de l'action</label>
   <input class="form-control" name="action" placeholder="Nom de l'action">
    <p class="help-block"></p>

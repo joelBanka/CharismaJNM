@@ -1,38 +1,55 @@
 <?php
 include 'db.php';
 
-
 $msg1 ='';
 $msg2='';
 $msg3='';
-
 $nom='';
 $prenom='';
+$emptyData = TRUE; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
- if(empty($_POST['nom']))
-{
-$msg1 = "Le Champ Nom doit être rempli";
-}
+    if(empty ($_POST['nom']))
+    {
+        $emptyData = TRUE;
+        $msg1 = "Le Champ Nom doit être rempli";      
+    }
+    else {
+        $emptyData = FALSE;      
+    }
+    
+    if(empty($_POST['prenom']))
+    {
+        $emptyData = TRUE;
+        $msg2 = "Le Champ Prenom doit être rempli";  
+    }
+    else {
+        $emptyData = FALSE;   
+    }
 
-if(empty($_POST['prenom']))
-{
-$msg2 = "Le Champ Prenom doit être rempli";
-}
-
-if(empty($_POST['mdp']))
-{
-$msg3 = "Entrer le mot de pass";
-}
-
+    if(empty($_POST['mdp']))
+    {
+        $emptyData = TRUE;  
+        $msg3 = "Entrer le mot de pass";
+    }
+    else {
+        $emptyData = FALSE;    
+    }
 
 } 
 
-
-if (isset($_POST["nom"]) && ($_POST["prenom"]) )
-{
-  $entrer = Insertioncommentaire($_POST['nom'], $_POST['prenom']);
+if (isset ($_POST["nom"],$_POST["prenom"],$_POST["mdp"]) && !$emptyData){
+    
+    if(isGoodPasword($_POST["mdp"])){
+       
+        $entrer = insertionUtilisateur($_POST['nom'], $_POST['prenom']);
+    }
+    else{
+        echo "insertion échouée";
+    } 
+        
+    
 }
 
 /*$nom = $_POST['nom'];
@@ -43,7 +60,6 @@ if (isset($_POST["nom"]) && ($_POST["prenom"]) )
 echo $nom;
 echo $prenom;
 } */
-
 
 ?>
 <!DOCTYPE html>
