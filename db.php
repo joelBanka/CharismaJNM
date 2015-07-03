@@ -71,8 +71,6 @@ function isGoodPasword($pass){
     }
     return false;  
      
-     
-     
 }
 
 
