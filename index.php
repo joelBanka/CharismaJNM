@@ -1,52 +1,50 @@
 <?php
-$nom ='';
+include 'db.php';
+
+
+$msg1 ='';
+$msg2='';
+$msg3='';
+
+$nom='';
 $prenom='';
 
- $msg = "Veullez saisir les champs Nom et Prenom";
- if(isset($_POST))
-  echo "je poste";
- echo "je ne poste pas (test pour commit) le pull de mermoz ne marche pas";
- /*if(isset($_POST) && (!empty($_POST['nom']))  && (!empty($_POST['prenom']))){
-  $msg = "Insertion reussie";
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+ if(empty($_POST['nom']))
+{
+$msg1 = "Le Champ Nom doit être rempli";
 }
 
-else if(isset($_POST)&&(empty($_POST['nom']))  || (isset($_POST)  empty($_POST['prenom'])))  { 
-$msg = 'Veullez saisir les champs Nom ou Prenom';
-}*/
+if(empty($_POST['prenom']))
+{
+$msg2 = "Le Champ Prenom doit être rempli";
+}
 
- 
-$link=mysqli_connect("localhost","root","");
-mysqli_select_db($link,"script_action");
-//echo "string";
+if(empty($_POST['mdp']))
+{
+$msg3 = "Entrer le mot de pass";
+}
 
-//$sql="SELECT nom
-//FROM utilisateur";
-$nom = $_POST['nom'];
+
+} 
+
+
+if (isset($_POST["nom"]) && ($_POST["prenom"]) )
+{
+  $entrer = Insertioncommentaire($_POST['nom'], $_POST['prenom']);
+}
+
+/*$nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 
+if (isset($_POST["nom"]) && ($_POST["prenom"]) )
+{
 echo $nom;
 echo $prenom;
- /*session_start();
- if(isset($_POST) && !empty($_post['nom'])){
-   extract($_post);
-   
-   $pass=md5($pass);
-   //Connection à bd
-   $link=mysqli_connect("localhost","root","");
-   mysqli_select_db($link,"script_action");
-   echo '$toto';
-   //$sql="SELECT id FROM users WHERE login='$login'AND pass='$pass'";
-   
-   $req=mysqli_query($link,$sql) or die(mysqli_error());
-   if(mysqli_num_rows($req)>0){
-   $_SESSION['Auth']=array(
-    'login'=>$login,
-    'pass'=>$pass
-     );
-  } else{
-    echo"Mauvais identifiants";
-   }
- }*/
+} */
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -85,7 +83,19 @@ echo $prenom;
               <button class="btn btn-primary btn-lg btn-block " type="submit">Soumettre</button><br>
              <!-- <span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>-->
              <?php 
-             echo '<center class="text-danger">'. $msg. '<center>';
+             if (isset($_POST["nom"]))
+             {
+             echo '<center class="text-danger">'. $msg1. '<center>';
+            }
+
+              if (isset($_POST["prenom"]))
+             {
+             echo '<center class="text-danger">'. $msg2. '<center>';
+            }
+            if (isset($_POST["mdp"]))
+             {
+             echo '<center class="text-danger">'. $msg3. '<center>';
+            }
              ?>
             </div>
           </form>
