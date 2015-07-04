@@ -39,7 +39,7 @@ function premierepage()
 	}
 }
 
-function Insertioncommentaire($lasnam, $firsnam)
+function InsertionNomPrenom($lasnam, $firsnam)
 {
 	$dbh = connect();
 	$sql = "INSERT INTO utilisateur

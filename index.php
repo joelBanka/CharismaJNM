@@ -32,7 +32,7 @@ $msg3 = "Entrer le mot de pass";
 
 if (isset($_POST["nom"]) && ($_POST["prenom"]) )
 {
-  $entrer = Insertioncommentaire($_POST['nom'], $_POST['prenom']);
+  $entrer = InsertionNomPrenom($_POST['nom'], $_POST['prenom']);
 }
 
 /*$nom = $_POST['nom'];
