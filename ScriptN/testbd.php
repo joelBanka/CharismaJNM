@@ -12,12 +12,9 @@ include 'db.php';
     foreach ($afficher as $mediatheque)
     {
 		echo "<tr><td>";
-		
 		echo "</td><td>";
 		echo "<tr><td>".$mediatheque['nom'];
-		echo "</td><td>";
-		
-    
+		echo "</td><td>";    
     }
     ?>
     </table>
