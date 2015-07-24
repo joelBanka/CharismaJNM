@@ -72,12 +72,12 @@ echo $prenom;
       <div class="modal-body">
           <form action="" method="post">
             <div class="form-group">
-              <input type="text" name="nom" class="form-control input-lg" placeholder="Nom">
+                <input type="text" name="nom" class="form-control input-lg" placeholder="Nom" required>
             </div><div class="form-group">
-              <input type="text" name="prenom" class="form-control input-lg" placeholder="Prenom">
+                <input type="text" name="prenom" class="form-control input-lg" placeholder="Prenom" required>
             </div>
             <div class="form-group">
-              <input type="password" name="mdp" class="form-control input-lg" placeholder="Mot de passe">
+                <input type="password" name="mdp" class="form-control input-lg" placeholder="Mot de passe" required>
             </div>
             <div class="form-group">
               <button class="btn btn-primary btn-lg btn-block " type="submit">Soumettre</button><br>
