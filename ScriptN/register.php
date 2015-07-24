@@ -46,11 +46,9 @@ if (!$emptyData && isGoodPasword($_POST["mdp"]))
        //isset($_POST["nom"]) && ($_POST["prenom"]
 {
   $entrer = InsertionNomPrenom($_POST['nom'], $_POST['prenom']);
-    header('Location: title.php');
-  
+    header('Location: title.php');  
 }
 else {
     echo "insertion echoue";
 }
-
 ?>

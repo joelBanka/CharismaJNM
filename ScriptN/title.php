@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form action "titleControls.php", class="form-horizontal">
 <fieldset>
 
 <!-- TITRE DU CULTE -->

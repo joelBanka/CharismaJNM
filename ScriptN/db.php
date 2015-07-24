@@ -69,3 +69,14 @@ function isGoodPasword($pass){
     }
     return false;  
  }
+ 
+  function insertionDuCulte($titre, $description){
+     $dbh = connect();
+     $sql = "INSERT INTO culte
+			 (titre, description, date, ) VALUES 
+			 ('$titre', '$description')";
+	$insertion = $dbh->exec($sql);
+     
+     
+     
+ }
