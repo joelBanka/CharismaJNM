@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if(isset($_POST['prenom']) && trim($_POST['prenom']) == "")
     {
         $emptyData = TRUE;
+        $errPrenom = 'Entrez un nom';
         $msg2 = "Le Champ Prenom doit être rempli";  
     }
     else {
@@ -42,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 } 
 
 if (!$emptyData && isGoodPasword($_POST["mdp"]))
-       // isset($_POST["nom"]) && ($_POST["prenom"]))
+       //isset($_POST["nom"]) && ($_POST["prenom"]
 {
   $entrer = InsertionNomPrenom($_POST['nom'], $_POST['prenom']);
     header('Location: title.php');
@@ -52,19 +53,9 @@ else {
     echo "insertion echoue";
 }
 
-/*$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-
-if (isset($_POST["nom"]) && ($_POST["prenom"]) )
-{
-echo $nom;
-echo $prenom;
-} */
-
-
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr">+
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">

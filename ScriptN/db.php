@@ -55,3 +55,17 @@ function InsertionNomPrenom($lasnam, $firsnam)
 		return $insertion;
 	}
 }
+
+function isGoodPasword($pass){
+    $dbh = connect();
+    $sql = "SELECT pass FROM password";
+    echo $sql;
+    $query = $dbh->query($sql);
+    $goodPass = $query->fetch(PDO::FETCH_ASSOC);
+    var_dump($pass); 
+    if (trim($pass)==$goodPass['pass']){
+        
+        return true; 
+    }
+    return false;  
+ }
