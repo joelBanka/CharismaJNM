@@ -90,8 +90,7 @@
       <input type="checkbox" value=""> AUTRE 
     </label> 
 </div> 
-	
-	<br> </br>
+<br> </br>
 	<div>
  <label> Nom de l'action</label>
   <input class="form-control">
@@ -102,6 +101,11 @@
  <label for="comment">Informations complémentaires</label>
  <textarea class="form-control" rows="5" id="comment"></textarea>
   </div>
+        
+        <br> <label> Action retrospective </label> </br>
+    <label class="checkbox-inline">
+      <input type="checkbox" value=""> RETOSPECTIVE
+    </label>
 	
 <br></br>
 	

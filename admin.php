@@ -201,18 +201,6 @@ var n = minute.toString();
      <p class="help-block"></p>
 	</div>
 	
-	<div class="form-group">
- <label for="nom">Nom opérateur</label>
-  <input class="form-control" name="nom" placeholder="nom">
-   <p class="help-block"></p>
-	</div>
-	
-		
-	<div>
- <label for="prénom">Prénom</label>
-  <input class="form-control" name="prenom" placeholder="prenom">
-   <p class="help-block"></p>
-    </div>
 	
 	<div>
  <label for="titre"> TITRE DU CULTE</label>
@@ -238,6 +226,13 @@ var n = minute.toString();
   <input class="form-control" name="action" placeholder="Nom de l'action">
    <p class="help-block"></p>
     </div>
+        
+        <div class="container">
+<br> <label for="auteur"> Auteur de l'action</label> </br>
+    <label class="radio-inline" for="pasteur">
+      <input type="radio" name="auteur" value="pasteur"> RETRO ACTION
+    </label>
+   </div>	
 	
 <div class="form-group">
  <label for="comment">Informations complémentaires</label>
