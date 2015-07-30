@@ -1,7 +1,6 @@
 <?php
 include 'db.php';
 
-
 $msg1 ='';
 $msg2='';
 $msg3='';
