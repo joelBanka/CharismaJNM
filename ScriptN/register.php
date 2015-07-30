@@ -50,5 +50,6 @@ if (!$emptyData && isGoodPasword($_POST["mdp"]))
 }
 else {
     echo "insertion echoue";
+    header('Location: index.php');
 }
 ?>
