@@ -10,3 +10,4 @@ echo $description;
 
     insertionDuCulte($titre, $description);
 
+    header('Location: enregistrement.php');
