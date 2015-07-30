@@ -5,7 +5,7 @@ function  Connect()
 	$pass = '';
 	$hote = 'localhost';
 	$port = '80';
-	$base = 'script_action';
+	$base = 'action_script';
 	$dsn="mysql:$hote;port=$port;dbname=$base";
 
 	try
@@ -70,13 +70,19 @@ function isGoodPasword($pass){
     return false;  
  }
  
-  function insertionDuCulte($titre, $description){
+ function insertionDuCulte($titre, $description){
      $dbh = connect();
      $sql = "INSERT INTO culte
-			 (titre, description, date, ) VALUES 
+			 (titre, description) VALUES 
 			 ('$titre', '$description')";
-	$insertion = $dbh->exec($sql);
-     
-     
-     
+	
+     $insertion = $dbh->exec($sql);
+    /* if ($insertion == false)
+	{
+		return false;
+	}
+	else
+	{
+            return $insertion;
+	}     */
  }

@@ -1,14 +1,14 @@
-<form action "titleControls.php", class="form-horizontal">
-<fieldset>
+<form action="titleControls.php" class="form-horizontal" method="post">
+<fieldset
 
 <!-- TITRE DU CULTE -->
 <legend>Titre du culte</legend>
 
 <!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="textinput">Titre du culte</label>
+  <label class="control-label" for="">Titre du culte</label>
   <div class="controls">
-    <input id="textinput" name="textinput" placeholder="Entrez le titre ici" class="input-large" type="text">
+    <input id="title" name="titre" placeholder="Entrez le titre ici" class="input-large" type="text">
     <p class="help-block">ex: La puissance de Dieu </p>
   </div>
 </div>
@@ -17,7 +17,7 @@
 <div class="control-group">
   <label class="control-label" for="Desc">Description du culte</label>
   <div class="controls">                     
-    <textarea id="Desc" name="Desc">Entrez la description ici
+    <textarea id="Desc" name="desc">Entrez la description ici
 </textarea>
   </div>
 </div>
@@ -26,7 +26,7 @@
 <div class="control-group">
   <label class="control-label" for="titlevalidBtn"></label>
   <div class="controls">
-    <button id="titlevalidBtn" name="titlevalidBtn" class="btn btn-primary">Enregistrer</button>
+    <button id="titlevalidBtn" name="validBtn" class="btn btn-primary">Enregistrer</button>
   </div>
 </div>
 
